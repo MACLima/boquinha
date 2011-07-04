@@ -1,0 +1,25 @@
+header {padding-top:25px; border-bottom:1px solid #ccc; padding-bottom:20px}
+header .logo {font-size:3.52em; width:100%; margin-bottom:15px}
+header nav a {
+    margin-top:5px;
+    display:inline; 
+    padding:3px 10px; 
+    border-right:1px solid #eee; 
+    font-size:1.52em; 
+    font-family:Georgia, "Times New Roman", Times, serif; 
+    text-decoration:none;
+}
+header nav a:hover {background-color:#eee; border-right:1px solid #ccc; text-shadow:-1px -1px 0px #fff;}
+header nav a.last {border-right:none;}
+
+#principal {margin-left:auto; margin-right:auto; max-width:800px}
+#principal div {margin:0px 0px 12px 0px; padding:6px; border:1px solid #eee; }
+#principal div.semborda {border:none};
+
+h2 {border-bottom:1px dashed #ccc; margin-top:15px;}
+
+footer {color:#666; font-size:0.9em; padding:4px 0px;}
+
+form .textarea, form input[type=text] {float:right; width:75%}
+
+form input[type=submit] {float:right; width:auto;}

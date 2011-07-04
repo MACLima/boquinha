@@ -1,0 +1,30 @@
+<h2 class="fontface">Cadastro de Receita</h2>
+<% form_for(@receita) do |f| %>
+	<%= f.error_messages %>	
+	<fieldset>
+	    <div class="rounded">
+	    	<%= f.label :titulo %>
+	    	<%= f.text_field :titulo, :class => "box_shadow" %>
+	    </div>
+	    <div class="rounded">
+	    	<%= f.label :autor %>
+	    	<%= f.text_field :autor, :class => "box_shadow" %>
+	    </div>
+	    <!-- <%= @linhas = 5 %> -->
+	    <div class="rounded">
+	    	<%= f.label :ingredientes %>
+	    	<%= f.text_area :ingredientes, :rows => @linhas, :class => "box_shadow textarea" %>
+	    </div>
+	    <div class="rounded">
+	    	<%= f.label :modo %>
+	    	<%= f.text_area :modo, :rows => @linhas, :class => "box_shadow textarea" %>
+	    </div>
+	    <div class="rounded">
+	    	<%= f.label :observacoes %>
+	    	<%= f.text_area :observacoes, :rows => @linhas, :class => "box_shadow textarea" %>
+	    </div>
+	    <div class="semborda">
+	    	<%= f.submit 'Enviar &rarr;' %>
+	    </div>
+    </fieldset>
+<% end %>

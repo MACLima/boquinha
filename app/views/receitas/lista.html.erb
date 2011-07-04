@@ -1,0 +1,9 @@
+<h2 class="fontface">Escolha sua receita</h2>
+
+<div class="col_2 col rounded">
+	<ul id="receitas">
+		<% @receitas.each do |receita| %>
+			<li><%=link_to receita.titulo, receita %></li>
+		<% end %>            
+	</ul>
+</div>

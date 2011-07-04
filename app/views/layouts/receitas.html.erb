@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset=utf-8>
+    <title>boquinha - sua receita em minutos!</title>
+    
+    <!-- this is for mobile devices -->
+    <meta name="viewport" content="width=320; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta name="apple-touch-fullscreen" content="yes" /> 
+    
+    <%= javascript_include_tag '/52f/js/modernizr-1.5.min' %>
+    <!-- this is the javascript allowing html5 to run in older browsers -->
+    <!--[if IE]><%= javascript_include_tag '/52f/canvas/excanvas'%><![endif]-->
+    
+    <!-- latest jquery library -->
+    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js' %>
+    
+    <!-- 52 Framework -->
+    <%= stylesheet_link_tag '/52f/css/reset', '/52f/css/css3', '/52f/css/general', '/52f/css/forms' %>
+        
+    <!-- this script is needed to accomplish html5 validation, uses jquery tools validator script -->
+    <%= javascript_include_tag '/52f/js/validator' %>
+    
+    <%= stylesheet_link_tag 'receitas' %>
+    
+    <!-- this stylesheet required for mobile browsers, inside it allows you to control portrait and landscape modes -->
+    <%= stylesheet_link_tag '/52f/css/mobile' %>
+    
+    <!-- Receitas -->
+    <%= javascript_include_tag 'receitas'%>
+	
+	<script type="text/javascript">
+		window.onload = function() {
+			$('#principal').slideDown('slow', 'swing');	
+		}
+	</script>
+</head>
+<body>
+	<div class="row"> 
+		<header>
+			<div class="logo shadow align_center">boquinha!</div>
+				<nav class="col_9 col align_center">
+					<%=link_to "home", receitas_path %>
+					<%=link_to "receitas", :action => "lista" %>
+					<%=link_to "cadastro", new_receita_path %>
+					<%=link_to "sobre", :action => "sobre" %>
+				</nav><!-- nav col_9 -->
+			<div class="clear"></div><!-- clear -->
+		</header>
+	</div>
+
+	<section id="principal" class="hide row align_left">
+    	<p style="color: green"><%= flash[:notice] %></p>
+		<%= yield %>  
+    </section>
+	
+	<footer class="row align_center">
+    	<div class="col_16 col">todos os direitos reservados &copy; Marco Lima | MACLima</div>
+    </footer>
+</body>
+</html>
